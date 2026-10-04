@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-display: "Bodoni Moda", serif;
+  --font-script: "Pinyon Script", cursive;
+  --font-hand: "Caveat", cursive;
+  --font-typewriter: "Courier Prime", monospace;
+
+  --color-dustyRose: #c8929e;
+  --color-dustyRoseDark: #ba808c;
+  --color-pastelBlue: #8da8be;
+  --color-pastelBlueDark: #7d9ab1;
+  --color-kraftTan: #c2aa96;
+  --color-kraftTanDark: #b29882;
+  --color-deepBurgundy: #5a1e24;
+
+  --shadow-folder-layer: 0 12px 28px -4px rgba(35, 25, 20, 0.16), 0 4px 12px -2px rgba(40, 25, 20, 0.08);
+  --shadow-paper-lip: 0 4px 10px rgba(0, 0, 0, 0.08), inset 0 2px 3px rgba(255,255,255,0.8);
+  --shadow-vinyl: 0 12px 28px rgba(0,0,0,0.35), 0 2px 6px rgba(0,0,0,0.2);
+}
+
+body {
+  background-color: #f6f1e8;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(200, 185, 170, 0.45) 31px, rgba(200, 185, 170, 0.45) 32px),
+    repeating-linear-gradient(90deg, transparent, transparent 31px, rgba(200, 185, 170, 0.45) 31px, rgba(200, 185, 170, 0.45) 32px);
+  background-size: 32px 32px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.vinyl-grooves {
+  background: radial-gradient(circle, #222 24%, #111 26%, #111 36%, #1d1d1d 38%, #111 50%, #1e1e1e 52%, #0d0d0d 62%, #1a1a1a 64%, #0a0a0a 100%);
+  box-shadow: inset 0 0 12px rgba(255,255,255,0.15), 0 14px 28px rgba(0,0,0,0.4);
+}
+
+@keyframes spinDisc {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-record {
+  animation: spinDisc 4.5s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+.washi-tape {
+  background: rgba(238, 222, 192, 0.82);
+  border-left: 2px dashed rgba(175, 140, 105, 0.45);
+  border-right: 2px dashed rgba(175, 140, 105, 0.45);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.tab-left-slant {
+  clip-path: polygon(0% 0%, 82% 0%, 100% 100%, 0% 100%);
+}
+
+.tab-right-slant {
+  clip-path: polygon(18% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
