@@ -179,7 +179,7 @@ function MusicModal({ show, onClose }) {
         <iframe
           key={track.youtubeId}
           className="w-full aspect-video rounded-xl shadow-lg border border-slate-700"
-          src={`https://www.youtube.com/embed/${track.youtubeId}?autoplay=1`}
+          src={`https://www.youtube-nocookie.com/embed/${track.youtubeId}`}
           title={track.title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
