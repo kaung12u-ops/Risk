@@ -64,7 +64,7 @@ function VinylRecord() {
   return (
     <div className="absolute -top-12 left-8 sm:left-12 z-20 pointer-events-none select-none transition-all duration-500 group-hover:-translate-y-4 flex items-center">
       <div className="w-20 h-20 sm:w-24 sm:h-24 bg-[#802224] rounded-md border-2 border-stone-800 shadow-2xl transform -rotate-12 p-1.5 flex flex-col justify-between overflow-hidden">
-        <div className="text-[7px] sm:text-[8px] font-typewriter text-stone-300 font-bold uppercase">DECEMBER PHOTO DUMP</div>
+        <div className="text-[7px] sm:text-[8px] font-typewriter text-stone-300 font-bold uppercase">Album for you</div>
         <div className="w-12 h-12 bg-stone-900/40 rounded border border-white/20 mx-auto flex items-center justify-center text-white text-sm font-serif">✦</div>
         <div className="text-[6px] font-typewriter text-stone-300 text-right">SIDE A • 33 RPM</div>
       </div>
