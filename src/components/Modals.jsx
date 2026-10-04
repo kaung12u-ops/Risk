@@ -128,28 +128,28 @@ const playlist = [
 const galleryItems = [
   {
     type: "image",
-    src: "public/photo/photo1.jpg",
+    src: "/photo/photo1.jpg",
     title: "May Kyal Lay✨",
     caption: "Hey What are you looking for?👀",
     date: "Oct 4"
   },
   {
     type: "video",
-    src: "public/video/video1.mp4",
+    src: "/video/video1.mp4",
     title: "May Kyal Lay's Smile",
     caption: "May Kyal Lay a pyone ka arr lone htet chyo tl🤭",
     date: "OCT 4"
   },
   {
     type: "image",
-    src: "public/photo/photo2.png",
+    src: "/photo/photo2.png",
     title: "Hey this is you?",
     caption: "I wanna know where is this place?🤔",
     date: "Oct 4"
   },
   {
     type: "video",
-    src: "public/video/video2.mp4",
+    src: "/video/video2.mp4",
     title: "a thae kyaw pae hlaw lay😜",
     caption: "Her dancing moves that make me smile",
     date: "Oct 4"
