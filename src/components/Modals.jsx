@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import Confetti from './Confetti'
 import { triggerConfetti } from './Confetti'
 import HeartBackground from './HeartBackground'
+import PasscodeLock from './PasscodeLock'
 
 function Modal({ show, onClose, children, className = '' }) {
   const [visible, setVisible] = useState(false)
@@ -49,9 +50,14 @@ function Modal({ show, onClose, children, className = '' }) {
 function LetterModal({ show, onClose }) {
   const confettiRef = useRef(null)
   const [emitConfetti, setEmitConfetti] = useState(false)
+  const [isUnlocked, setIsUnlocked] = useState(false)
 
   useEffect(() => {
-    if (show) {
+    if (!show) setIsUnlocked(false)
+  }, [show])
+
+  useEffect(() => {
+    if (show && isUnlocked) {
       // Emit confetti after modal pop-in animation completes (350ms)
       const timer = setTimeout(() => setEmitConfetti(true), 350)
       return () => {
@@ -59,7 +65,7 @@ function LetterModal({ show, onClose }) {
         setEmitConfetti(false)
       }
     }
-  }, [show])
+  }, [show, isUnlocked])
 
   const handleClose = useCallback(() => {
     setEmitConfetti(false)
@@ -89,6 +95,14 @@ function LetterModal({ show, onClose }) {
   }, [])
 
   if (!show) return null
+
+  if (!isUnlocked) {
+    return (
+      <Modal show={show} onClose={handleClose}>
+        <PasscodeLock onUnlock={() => setIsUnlocked(true)} />
+      </Modal>
+    )
+  }
 
   return (
     <Modal show={show} onClose={handleClose}>
